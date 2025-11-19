@@ -1,0 +1,30 @@
+[
+  {
+    "id": 4,
+    "title": "Meeting Notes",
+    "body": "This is an example note. It contains **Markdown**!",
+    "created_at": "2024-12-28T15:30:00.000Z",
+    "updated_at": "2024-12-28T15:30:00.000Z"
+  },
+  {
+    "id": 3,
+    "title": "Make a thing",
+    "body": "It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to React's website!](https://www.reactjs.org).",
+    "created_at": "2025-01-04T10:00:00.000Z",
+    "updated_at": "2025-01-04T10:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "title": "A note with a very long title because sometimes you need more words",
+    "body": "You can write all kinds of [amazing](https://en.wikipedia.org/wiki/The_Amazing) notes in this app! These note live on the server in the `notes` folder.\n\n![This app is powered by React](https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/React_Native_Logo.png/800px-React_Native_Logo.png)",
+    "created_at": "2025-02-14T20:45:00.000Z",
+    "updated_at": "2025-02-14T20:45:00.000Z"
+  },
+  {
+    "id": 1,
+    "title": "I wrote this note today",
+    "body": "It was an excellent note.",
+    "created_at": "2025-03-03T18:12:00.000Z",
+    "updated_at": "2025-03-03T18:12:00.000Z"
+  }
+]

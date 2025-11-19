@@ -1,0 +1,94 @@
+{
+  "name": "react-server-dom-webpack",
+  "description": "React Server Components bindings for DOM using Webpack. This is intended to be integrated into meta-frameworks. It is not intended to be imported directly.",
+  "version": "19.2.0",
+  "keywords": [
+    "react"
+  ],
+  "homepage": "https://react.dev/",
+  "bugs": "https://github.com/facebook/react/issues",
+  "license": "MIT",
+  "files": [
+    "dist/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./plugin": "./dist/plugin.js",
+    "./client": {
+      "workerd": "./dist/client.edge.js",
+      "deno": "./dist/client.edge.js",
+      "worker": "./dist/client.edge.js",
+      "node": {
+        "webpack": "./dist/client.node.js",
+        "default": "./dist/client.node.unbundled.js"
+      },
+      "edge-light": "./dist/client.edge.js",
+      "browser": "./dist/client.browser.js",
+      "default": "./dist/client.browser.js"
+    },
+    "./client.browser": "./dist/client.browser.js",
+    "./client.edge": "./dist/client.edge.js",
+    "./client.node": "./dist/client.node.js",
+    "./client.node.unbundled": "./dist/client.node.unbundled.js",
+    "./server": {
+      "react-server": {
+        "workerd": "./dist/server.edge.js",
+        "deno": "./dist/server.browser.js",
+        "node": {
+          "webpack": "./dist/server.node.js",
+          "default": "./dist/server.node.unbundled.js"
+        },
+        "edge-light": "./dist/server.edge.js",
+        "browser": "./dist/server.browser.js"
+      },
+      "default": "./dist/server.js"
+    },
+    "./server.browser": "./dist/server.browser.js",
+    "./server.edge": "./dist/server.edge.js",
+    "./server.node": "./dist/server.node.js",
+    "./server.node.unbundled": "./dist/server.node.unbundled.js",
+    "./static": {
+      "react-server": {
+        "workerd": "./dist/static.edge.js",
+        "deno": "./dist/static.browser.js",
+        "node": {
+          "webpack": "./dist/static.node.js",
+          "default": "./dist/static.node.unbundled.js"
+        },
+        "edge-light": "./dist/static.edge.js",
+        "browser": "./dist/static.browser.js"
+      },
+      "default": "./dist/static.js"
+    },
+    "./static.browser": "./dist/static.browser.js",
+    "./static.edge": "./dist/static.edge.js",
+    "./static.node": "./dist/static.node.js",
+    "./static.node.unbundled": "./dist/static.node.unbundled.js",
+    "./node-loader": "./dist/esm/react-server-dom-webpack-node-loader.production.js",
+    "./node-register": "./dist/node-register.js",
+    "./src/*": "./src/*.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/facebook/react.git",
+    "directory": "packages/react-server-dom-webpack"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "peerDependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "webpack": "^5.59.0"
+  },
+  "dependencies": {
+    "acorn-loose": "^8.3.0",
+    "neo-async": "^2.6.1",
+    "webpack-sources": "^3.2.0"
+  }
+}

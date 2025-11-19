@@ -1,0 +1,19 @@
+{
+  "name": "e2e",
+  "private": true,
+  "scripts": {
+    "test": "ts-node ./scripts/run-tests.ts",
+    "test:headed": "ts-node ./scripts/run-tests.ts --headed",
+    "test:install": "playwright install --with-deps"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "cross-env": "^7.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "wait-on": "^7.2.0"
+  },
+  "dependencies": {
+    "@types/wait-on": "^5.3.4"
+  }
+}
