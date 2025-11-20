@@ -23,7 +23,6 @@
     "express": "^4.18.2",
     "html-webpack-plugin": "5.5.0",
     "marked": "^4.2.12",
-    "nodemon": "^2.0.21",
     "pg": "^8.10.0",
     "react": "19.2.0",
     "react-dom": "19.2.0",
@@ -42,10 +41,10 @@
   "scripts": {
     "start": "concurrently \"npm run server:dev\" \"npm run bundler:dev\"",
     "start:prod": "concurrently \"npm run server:prod\" \"npm run bundler:prod\"",
-    "server:dev": "cross-env NODE_ENV=development nodemon -- --conditions=react-server server",
-    "server:prod": "cross-env NODE_ENV=production nodemon -- --conditions=react-server server",
-    "bundler:dev": "cross-env NODE_ENV=development nodemon -- scripts/build.js",
-    "bundler:prod": "cross-env NODE_ENV=production nodemon -- scripts/build.js",
+    "server:dev": "cross-env NODE_ENV=development node --watch --conditions=react-server server",
+    "server:prod": "cross-env NODE_ENV=production node --conditions=react-server server",
+    "bundler:dev": "cross-env NODE_ENV=development WATCH=1 node scripts/build.js",
+    "bundler:prod": "cross-env NODE_ENV=production node scripts/build.js",
     "seed": "node ./scripts/seed.js"
   },
   "babel": {

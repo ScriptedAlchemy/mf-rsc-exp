@@ -4,7 +4,6 @@ const DEFAULT_SCOPE = 'default';
 const CLIENT_LAYER = 'client';
 const SERVER_LAYER = 'server';
 const NON_SEMVER_PREFIXES = ['workspace:', 'link:', 'file:'];
-
 function normalizeVersion(range) {
   if (!range) {
     return false;
@@ -49,6 +48,7 @@ function createSharedConfig(pkg) {
       shareKey: options.shareKey ?? request,
       shareScope: options.shareScope ?? DEFAULT_SCOPE,
       singleton: options.singleton ?? true,
+      eager: false,
       layer: options.layer,
       issuerLayer: options.issuerLayer,
       allowNodeModulesSuffixMatch:
@@ -71,7 +71,6 @@ function createSharedConfig(pkg) {
       shareScope: CLIENT_LAYER,
       layer: CLIENT_LAYER,
       issuerLayer: CLIENT_LAYER,
-      eager: true,
     }),
     'react-server-dom-webpack/client': makeEntry(
       'react-server-dom-webpack/client',

@@ -4,12 +4,12 @@
   "packageManager": "pnpm@10.8.1",
   "dependencies": {
     "react": "workspace:*",
-    "react-dom": "workspace:*",
     "react-client": "workspace:*",
-    "react-server": "workspace:*",
+    "react-dom": "workspace:*",
     "react-dom-bindings": "workspace:*",
-    "shared": "workspace:*",
-    "react-server-dom-webpack": "workspace:*"
+    "react-server": "workspace:*",
+    "react-server-dom-webpack": "workspace:*",
+    "shared": "workspace:*"
   },
   "devDependencies": {
     "cross-env": "^7.0.3"
@@ -18,7 +18,10 @@
     "overrides": {
       "react-is": "npm:react-is",
       "jsdom": "22.1.0"
-    }
+    },
+    "ignoredBuiltDependencies": [
+      "esbuild"
+    ]
   },
   "scripts": {
     "build": "pnpm run build:react-rsdw",
