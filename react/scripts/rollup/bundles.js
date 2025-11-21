@@ -573,7 +573,7 @@ const bundles = [
     bundleTypes: [NODE_ES2015],
     moduleType: RENDERER_UTILS,
     entry: 'react-server-dom-webpack/src/ReactFlightWebpackPlugin',
-    outputDir: RSDW_CJS_DIST,
+    outputPath: path.join(RSDW_CJS_DIST, 'react-server-dom-webpack-plugin.js'),
     global: 'ReactServerWebpackPlugin',
     minifyWithProdErrorCodes: false,
     wrapWithModuleBoundaries: false,
