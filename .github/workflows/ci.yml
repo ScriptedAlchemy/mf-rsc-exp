@@ -31,7 +31,9 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Install Playwright browsers
-        run: pnpm --filter e2e exec playwright install --with-deps
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: 0
+        run: pnpm --filter e2e exec playwright install chromium --with-deps
 
       - name: Build local React Server DOM Webpack
         run: pnpm run build
